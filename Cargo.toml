@@ -1,0 +1,15 @@
+[package]
+name = "rs-netcat"
+version = "0.1.0"
+author = "荒川　健太郎<kagalpan@kacpp.xyz>"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+[[bin]]
+name = "rsnc"
+path = "src/main.rs"
+
+
