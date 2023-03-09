@@ -8,7 +8,8 @@ jobs:
             - checkout
             - run:
                 command: |
-                  cd rs-netcat
+                    ls -al
+#                   cd rs-netcat
                   cargo build
     test:
         docker:
