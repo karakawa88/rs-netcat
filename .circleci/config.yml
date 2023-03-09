@@ -9,6 +9,7 @@ jobs:
             - run:
                 command: |
                     ls -al
+                    ls -al
 #                   cd rs-netcat
                   cargo build
     test:
