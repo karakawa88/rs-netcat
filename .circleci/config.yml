@@ -4,10 +4,11 @@ jobs:
         docker:
           - image: cimage/rust:1.67.1
         steps:
-            - working_directory: ~/work
+#             - working_directory: ~/work
             - checkout
             - run:
                 command: |
+                  cd rs-netcat
                   cargo build
     test:
         docker:
