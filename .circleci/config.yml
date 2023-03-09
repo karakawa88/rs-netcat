@@ -1,0 +1,28 @@
+version: 2
+jobs:
+    build:
+        docker:
+          - image: cimage/rust:1.67.1
+        steps:
+            - working_directory: ~/work
+            - checkout
+            - run:
+                command: |
+                  cargo build
+    test:
+        docker:
+          - image: cimage/rust:1.67.1
+        steps:
+            - working_directory: ~/work
+            - checkout
+            - run:
+                command: |
+                  cargo test
+workflows:
+  version: 2
+  all:
+    jobs:
+        - build
+        - test:
+            requires:
+            - build
