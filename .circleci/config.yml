@@ -2,7 +2,7 @@ version: 2
 jobs:
     build:
         docker:
-          - image: cimage/rust:1.67.1
+          - image: cimg/rust:1.67.1
         steps:
 #             - working_directory: ~/work
             - checkout
@@ -12,7 +12,7 @@ jobs:
                   cargo build
     test:
         docker:
-          - image: cimage/rust:1.67.1
+          - image: cimg/rust:1.67.1
         steps:
             - working_directory: ~/work
             - checkout
